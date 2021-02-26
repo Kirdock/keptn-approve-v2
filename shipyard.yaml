@@ -25,6 +25,10 @@ spec:
           triggers:
             - "dev.artifact-delivery.finished"
           tasks:
+            - name: "approval"
+              properties:
+                pass: "manual"
+                warning: "manual"
             - name: "deployment"
               properties:
                 deploymentstrategy: "direct"
